@@ -11,6 +11,17 @@ module.exports = {
     path: path.resolve(__dirname, './web/build'),
     filename: '[name].js'
   },
+  module: {
+    loaders: [
+      {
+        test: /\.css$/, loaders: [
+          'style',
+          'css',
+          'autoprefixer'
+        ]
+      }
+    ]
+  },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common'
