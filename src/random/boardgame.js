@@ -1,3 +1,5 @@
+var getRandomNumber = require('./number');
+
 function getRandomBoardgame() {
   var boardgames = [
     'Roads and Boats',
@@ -9,3 +11,5 @@ function getRandomBoardgame() {
   var randomNum = getRandomNumber(0, boardgames.length - 1);
   return boardgames[randomNum];
 }
+
+module.exports = getRandomBoardgame;
