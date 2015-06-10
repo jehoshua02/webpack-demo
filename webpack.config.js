@@ -14,10 +14,11 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.css$/, loaders: [
+        test: /\.scss$/, loaders: [
           'style',
           'css',
-          'autoprefixer'
+          'autoprefixer',
+          'sass'
         ]
       }
     ]

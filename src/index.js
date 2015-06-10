@@ -1,4 +1,4 @@
-require('./css/styles.css');
+require('./scss/styles.scss');
 
 var getRandomBoardgame = require('./random/boardgame');
 
