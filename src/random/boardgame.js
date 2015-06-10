@@ -1,4 +1,4 @@
-var getRandomNumber = require('./number');
+var getRandomNumber = require('lodash/number').random;
 
 function getRandomBoardgame() {
   var boardgames = [

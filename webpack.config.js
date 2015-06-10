@@ -1,10 +1,19 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
-  entry: './src/index.js',
+  devtool: 'source-maps',
+  entry: {
+    'boardgame-app': './src/index.js',
+    'food-app': './src/food.js'
+  },
   output: {
     path: path.resolve(__dirname, './web/build'),
-    filename: 'app.js'
-  }
+    filename: '[name].js'
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common'
+    })
+  ]
 };
